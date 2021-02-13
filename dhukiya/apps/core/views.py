@@ -20,3 +20,5 @@ def index(request):
     print (setting_list)
     return render(request, 'home.html',data)
 
+def blog(request):
+    return render(request, 'blog_detail.html')
