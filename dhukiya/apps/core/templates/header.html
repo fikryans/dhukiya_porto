@@ -1,0 +1,27 @@
+ {% load static %}
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+        <img src="{% static 'assets/img/logo.png' %}" alt="">
+
+        <span>{{setting_list.site_title}}</span>
+
+
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="{% url 'index' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index' %}#about">About</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index' %}#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index' %}#team">Team</a></li>
+          <li><a href="{% url 'index' %}blog.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="{% url 'index' %}#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+ 

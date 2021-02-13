@@ -1,0 +1,36 @@
+
+<section id="team" class="team">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h2>Team</h2>
+      <p>Our Team</p>
+    </header>
+    
+    <div class="row gy-4">
+      {% for team in team_list %}
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <div class="member-img">
+            {% if team.profile_pic %}
+            <img src="{{team.profile_pic.url}}" class="img-fluid" alt="">
+            {%endif%}
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a target="_blank" href="{{team.facebook}}"><i class="bi bi-facebook"></i></a>
+              <a target="_blank" href="{{team.instagram}}"><i class="bi bi-instagram"></i></a>
+              <a target="_blank" href="{{team.website}}"><i class="bi bi-app"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>{{team.first_name}} {{team.last_name}}</h4>
+            <span>{{team.role.div_descriptions}}</span>
+            <p>{{team.about_me}}</p>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+    
+  </div>
+
+</section>
